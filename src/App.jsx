@@ -1,6 +1,4 @@
 import './App.css'
-import logo from './assets/logo.png'
-import coin from './assets/coin.png'
 
 function App() {
 
@@ -8,14 +6,12 @@ function App() {
     <div>
       <div className="navbar bg-base-100 shadow-sm">
         <div className="flex-1">
-          <a className=" text-xl">
-            <img className='w-10 h-10' src={logo} alt="" />
-          </a>
+          <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
-        <div className="flex justify-center items-center gap-2 py-2 px-3 border-1 border-gray-300 rounded-2xl">
-          <span>6000000000</span>
-          <span>Coin</span>
-          <img className='w-7 h-7' src={coin} alt="" />
+        <div className="flex-none">
+          <button className="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block h-5 w-5 stroke-current"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path> </svg>
+          </button>
         </div>
       </div>
     </div>
