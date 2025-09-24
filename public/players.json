@@ -1,0 +1,134 @@
+[
+{
+"id": 1,
+"image": "https://i.ibb.co.com/MD6QkMBr/1.jpg",
+"name": "Tamim Iqbal",
+"country": "Bangladesh",
+"playing_role": "Batsman",
+"rating": 9.2,
+"bating_style": "Left-handed",
+"bowling_style": "Right arm off-break",
+"price": 1600000
+},
+{
+"id": 2,
+"image": "https://i.ibb.co.com/Zz0qPNC4/2.jpg",
+"name": "Mushfiqur Rahim",
+"country": "Bangladesh",
+"playing_role": "Wicketkeeper-Batsman",
+"rating": 8.9,
+"bating_style": "Right-handed",
+"bowling_style": "Right arm leg-break",
+"price": 1450000
+},
+{
+"id": 3,
+"image": "https://i.ibb.co.com/ynpNnvVK/3.jpg",
+"name": "Shakib Al Hasan",
+"country": "Bangladesh",
+"playing_role": "All-rounder",
+"rating": 9.7,
+"bating_style": "Left-handed",
+"bowling_style": "Slow left arm orthodox",
+"price": 2000000
+},
+{
+"id": 4,
+"image": "https://i.ibb.co.com/FbLZPW66/4.jpg",
+"name": "Mustafizur Rahman",
+"country": "Bangladesh",
+"playing_role": "Bowler",
+"rating": 9.1,
+"bating_style": "Left-handed",
+"bowling_style": "Left arm medium-fast",
+"price": 1550000
+},
+{
+"id": 5,
+"image": "https://i.ibb.co.com/0jSbKspS/5.jpg",
+"name": "Mahmudullah Riyad",
+"country": "Bangladesh",
+"playing_role": "All-rounder",
+"rating": 8.8,
+"bating_style": "Right-handed",
+"bowling_style": "Right arm off-break",
+"price": 1400000
+},
+{
+"id": 6,
+"image": "https://i.ibb.co.com/pBYXTK97/6.jpg",
+"name": "Chris Gayle",
+"country": "West Indies",
+"playing_role": "Batsman",
+"rating": 9.3,
+"bating_style": "Left-handed",
+"bowling_style": "Right arm off-break",
+"price": 1700000
+},
+{
+"id": 7,
+"image": "https://i.ibb.co.com/39CknTrs/7.jpg",
+"name": "Andre Russell",
+"country": "West Indies",
+"playing_role": "All-rounder",
+"rating": 9.5,
+"bating_style": "Right-handed",
+"bowling_style": "Right arm fast-medium",
+"price": 1850000
+},
+{
+"id": 8,
+"image": "https://i.ibb.co.com/WWPyrZVc/8.jpg",
+"name": "Moeen Ali",
+"country": "England",
+"playing_role": "All-rounder",
+"rating": 9.0,
+"bating_style": "Left-handed",
+"bowling_style": "Right arm off-break",
+"price": 1650000
+},
+{
+"id": 9,
+"image": "https://i.ibb.co.com/XkkT5HsL/10.jpg",
+"name": "Dawid Malan",
+"country": "England",
+"playing_role": "Batsman",
+"rating": 8.6,
+"bating_style": "Left-handed",
+"bowling_style": "Leg-break",
+"price": 1250000
+},
+{
+"id": 10,
+"image": "https://i.ibb.co.com/pjhV5Hkv/9.jpg",
+"name": "Alex Hales",
+"country": "England",
+"playing_role": "Batsman",
+"rating": 8.7,
+"bating_style": "Right-handed",
+"bowling_style": "Right arm medium",
+"price": 1300000
+},
+{
+"id": 11,
+"image": "https://i.ibb.co.com/7Nj49Mff/11.jpg",
+"name": "Mohammad Nabi",
+"country": "Afghanistan",
+"playing_role": "All-rounder",
+"rating": 8.5,
+"bating_style": "Right-handed",
+"bowling_style": "Right arm off-break",
+"price": 1100000
+},
+{
+"id": 12,
+"image": "https://i.ibb.co.com/8DvN30Sg/12.jpg",
+"name": "Haider Ali",
+"country": "Pakistan",
+"playing_role": "Batsman",
+"rating": 8.3,
+"bating_style": "Right-handed",
+"bowling_style": "Right arm off-break",
+"price": 950000
+}
+]

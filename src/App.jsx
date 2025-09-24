@@ -1,21 +1,28 @@
 import './App.css'
+import AvailablePlayers from './components/AvailablePlayers/AvailablePlayers'
+import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
+import Navbar from './components/NavBar/Navbar'
+import { Suspense } from 'react'
+
+const fetchPlayers = async () => {
+  const res = await fetch('./players.json');
+  return res.json();
+}
+
 
 function App() {
 
+  const playersPromise = fetchPlayers();
+
   return (
-    <div>
-      <div className="navbar bg-base-100 shadow-sm">
-        <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <div className="flex-none">
-          <button className="btn btn-square btn-ghost">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block h-5 w-5 stroke-current"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path> </svg>
-          </button>
-        </div>
-      </div>
+    <div className='max-w-320 mx-auto'>
+      <Navbar />
+      <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
+        <AvailablePlayers playersPromise={playersPromise} />
+      </Suspense>
+      <SelectedPlayers />
     </div>
-  )
+  );
 }
 
 export default App
