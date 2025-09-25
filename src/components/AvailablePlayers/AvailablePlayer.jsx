@@ -4,8 +4,8 @@ import { useState } from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { byPrefixAndName, faFlag } from '@awesome.me/kit-KIT_CODE/icons'
 
-const AvailablePlayer = ({player, handleSetSelectedPlayer}) => {
-    const {image, name, country, playing_role, rating, bowling_style, bating_style, price} = player;
+const AvailablePlayer = ({ player, handleSetSelectedPlayer }) => {
+    const { image, name, country, playing_role, rating, bowling_style, bating_style, price } = player;
 
     const [selected, setSelected] = useState(false);
     return (
@@ -37,10 +37,13 @@ const AvailablePlayer = ({player, handleSetSelectedPlayer}) => {
                 </div>
                 <div className="card-actions flex justify-between items-center">
                     <h3 className='font-semibold'>Price: ${price}</h3>
-                    <button onClick={() => {
-                        setSelected(!selected);
-                        handleSetSelectedPlayer(player);
-                        }} className=" border-1 border-gray-200 rounded-md hover:bg-gray-100 px-3 py-1 text-[14px] font-normal">{selected? 'Selected':'Choose Player'}
+                    <button                        
+                        onClick={() => {
+                            setSelected(!selected);
+                            handleSetSelectedPlayer(player);
+                        }}  
+                        disabled={selected}                      
+                        className=" border-1 border-gray-200 rounded-md hover:bg-gray-100 px-3 py-1 text-[14px] font-normal">{selected ? 'Selected' : 'Choose Player'}
                     </button>
                 </div>
             </div>

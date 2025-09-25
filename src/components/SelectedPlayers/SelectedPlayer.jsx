@@ -1,4 +1,4 @@
-import React from 'react';
+import { toast } from 'react-toastify';
 
 const SelectedPlayer = ({ player, removePlayer }) => {
     const { image, name, playing_role } = player;
@@ -13,7 +13,10 @@ const SelectedPlayer = ({ player, removePlayer }) => {
                 </div>
             </div>
             <button
-                onClick={() => removePlayer(player)}
+                onClick={() => {
+                    removePlayer(player);
+                    toast(`${name} removed from the team`);
+                }}
             >❌</button>
         </div>
     );

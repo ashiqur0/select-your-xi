@@ -4,7 +4,7 @@ import SelectedPlayers from './components/SelectedPlayers/SelectedPlayers'
 import Navbar from './components/Headers/Navbar'
 import { Suspense, useState } from 'react'
 import Banner from './components/Headers/Banner'
-import { use } from 'react'
+import { toast, ToastContainer } from 'react-toastify';
 
 const fetchPlayers = async () => {
   const res = await fetch('./players.json');
@@ -15,16 +15,19 @@ const playersPromise = fetchPlayers();
 function App() {
 
   const [toggled, setToggle] = useState(true);
-  const [availableBalance, setAvailableBalance] = useState(6000000);
+  const [availableBalance, setAvailableBalance] = useState(25000000);
   const [purchasedPlayers, setpurchasedPlayers] = useState([]);
-  const [addMorePlayers, setAddMorePlayers] = useState(false);
 
   function handleSetSelectedPlayer(player) {
     if (availableBalance < player.price) {
       return alert('❌ insufficient balance');
     }
+    if (purchasedPlayers.length === 11) {
+      return toast('11 players already selected');
+    }
     setAvailableBalance(availableBalance - player.price);
     setpurchasedPlayers([...purchasedPlayers, player]);
+    toast(`${player.name} is added to the team`);
   }
 
   function removePlayer(player) {
@@ -33,20 +36,13 @@ function App() {
     setAvailableBalance(availableBalance + player.price);
   }
 
-  function handleSetAddMorePlayer(state) {
-    setAddMorePlayers(state);
-  }
-
-  const allPlayers = use(playersPromise);
-  // console.log(purchasedPlayers);
-
   return (
     <div className='max-w-320 mx-auto font-sora'>
       <Navbar availableBalance={availableBalance} />
       <Banner />
       <div className='flex justify-between items-center mt-10 mb-7'>
         <h2 className='font-bold text-3xl'>
-          {toggled ? `Available Players` : `Selected Player (${purchasedPlayers.length}/${allPlayers.length})`}
+          {toggled ? `Available Players` : `Selected Player (${purchasedPlayers.length}/11)`}
         </h2>
         <div className='border-1 border-gray-300 rounded-xl w-80 '>
           <button
@@ -84,6 +80,7 @@ function App() {
           >
         </SelectedPlayers>
       }
+      <ToastContainer />
     </div>
   );
 }

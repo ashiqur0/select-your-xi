@@ -2,7 +2,6 @@ import React from 'react';
 import SelectedPlayer from './SelectedPlayer';
 
 const SelectedPlayers = ({ purchasedPlayers, removePlayer }) => {
-    // console.log(purchasedPlayers);
 
     return (
         <div>
